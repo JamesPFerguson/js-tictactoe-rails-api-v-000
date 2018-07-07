@@ -34,6 +34,7 @@ function checkWinner() {
   winner = false
 
   for (var i = 0; i < 9; i++) {
+<<<<<<< HEAD
     board.push($("td")[i].innerHTML)
   } 
   
@@ -50,6 +51,20 @@ function checkWinner() {
  return winner;
 }
   
+=======
+    board.push($("td")[i])
+  } 
+
+  combos.some(function(combo)) {
+    if ( board[combo[0]] !=="" && board[combo[0]] === board[combo[1]] && board[combo[1]] === board[combo[2]]) ) {
+      setMessage(`Player ${board[combo[0]]} Won!`);
+      return winner = true
+    }
+  }
+  return winner
+  
+}
+>>>>>>> 60dc379c9465020c43f0e978bb6a5f826755d736
 
 function doTurn(square) {
   updateState(square);
